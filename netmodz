@@ -1,4 +1,4 @@
-tit=$"Versão Estavel NetModz V6.4 Creditos totais para @OMentalista e @John034"
+tit=$"Versão Estavel NetModz V2.3 Creditos totais para @OMentalista e @John034"
 tokens=$(echo "03bc4539-13db-4045-9119-a937eb48d41d
 91e22bd5-7b79-4fef-8dfa-c40f1ff3736b
 f922b71c-8b48-4363-a9fd-74c0757c161d
@@ -15,11 +15,10 @@ veri3=$(echo -e "\e[01;37m Vezes: \e[0m") # Vezes:
 while :; do
 clear && echo -e $tit
   echo -e "\e[01;37;41m             VIVO             \e[0m"; sleep .4; echo
-  echo -e "         ≡ \e[01;37mMenu v6.4\e[0m ≡"
+  echo -e "         ≡ \e[01;37mMenu v2.3\e[0m ≡"
   echo -e " \e[00;31m══════════════\e[0m\e[01;37m\e[00;31m═══════════════\e[0m"
-  echo -e " \e[01;37m[1]\e[0m\e[01;33m(NEW) PEGAR INTERNET\e[0m\c"; echo -e "    \e[02;03;37m\e[0m"
-  echo -e " \e[01;37m[2]\e[0m\e[01;33m(NEW) DATAMI\e[0m\c"; echo -e "    \e[02;03;37m\e[0m"
-  echo -e " \e[01;37m[0]\e[0m\e[01;33mSAIR DO SCRIPT\e[0m\c"; echo -e "          \e[02;03;37m\e[0m"
+  echo -e " \e[01;37m〘1〙\e[0m\e[01;33mPEGAR INTERNET\e[0m\c"; echo -e "    \e[02;03;37m\e[0m"
+  echo -e " \e[01;37m『0』\e[0m\e[01;33mSAIR DO SCRIPT\e[0m\c"; echo -e "          \e[02;03;37m\e[0m"
   echo -e " \e[00;31m═════════════════════════════\e[0m"
   
   read -n1 -p "$veri" verifica; echo
@@ -44,8 +43,8 @@ clear && echo -e $tit
               for o in $(seq $qtdtokens);
                  do
                   case $o in
-                  $qtdtokens) mssg=$(echo "");;
-                           *) mssg=$(echo "")
+                  $qtdtokens) mssg=$(echo "FINALIZANDO");;
+                           *) mssg=$(echo "PRÓXIMO")
                   esac
            VEZES=9999
            tokens1=("sed '"$o"p; d'")
@@ -101,10 +100,11 @@ clear && echo -e $tit
                       2) break
                  esac
            done;;
-     
+       
       
+       
        9) tail -n +120 principal > principal1 && head -n +28 principal1 > principal2 && rm principal1 && chmod +x principal2 && break;;
-       0) rm principal2 > /dev/null 2>&1; echo -e "\e[01;37mBy: | @EhisOpeNer E @NetModz\e[0m"; echo -e "\e[01;33mPara iniciar novamente digite: netmodzvivo\e[0m"|pv -qL 20; break;;
+       0) rm principal2 > /dev/null 2>&1; echo -e "\e[01;37mBy: | @EhisOpeNer E @NetModz\e[0m"; echo -e "\e[01;33mPara iniciar novamente digite: netmodz\e[0m"|pv -qL 20; break;;
        *) echo -e "\e[01;37;41m Calma \e[0m"; sleep 1
     esac # case MENU
 done # primeiro loop
