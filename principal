@@ -140,7 +140,7 @@ cd $HOME; clear
      case $opc in
           1) ./menuVivo.sh;;
           2) ./menuOi.sh;;
-          3) ./datami.sh;;
+          3) ./datami;;
           0) exit
      esac
 exit
