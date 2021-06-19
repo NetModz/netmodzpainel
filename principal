@@ -4,7 +4,7 @@ cd $HOME; clear
   nohup ./s </dev/null >/dev/null 2>&1&
   clear; sleep .1
   IMG1="NETMODZ V6.2"
-  IMG2="CRIADO POR: @Jon034"
+  IMG2="CRIADO POR: @NetModz"
   a=$"$IMG1" b=$"$IMG2" c=$"$IMG3" d=$"$IMG4" e=$"$IMG5"
     arr[0]="$a"; arr[1]="$b"; arr[2]="$c"
     arr[3]="$d"; arr[4]="$e"
@@ -87,7 +87,7 @@ cd $HOME; clear
     srr[4]="$e"; srr[5]="$e"
   while :; do
   clear; echo -e $IMG1 #31
-  c=$"VERIFICANDO O SERVIDOR"; d=$"SERVIDOR OK"
+  c=$"SERVIDOR OK"; d=$"SERVIDOR OK"
     arrr[0]="$c"; arrr[1]="$d"; arrr[2]="$c"
     arrr[3]="$c"; arrr[4]="$d"; arrr[5]="$c"
   rand=$[$RANDOM % ${#arrr[@]}]
