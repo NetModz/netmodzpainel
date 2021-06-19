@@ -117,7 +117,7 @@ cd $HOME; clear
   while :; do
   echo -e " \e[00;31mNETe[0m\e[01;37m\e[00;31mMODZ\e[0m"
   clear; echo -e $IMG2
-  echo -e "\e[01;37;41m           NETMODZ 6.2          \e[0m"; sleep .4; echo
+  echo -e "\e[01;37;41m           NETMODZ          \e[0m"; sleep .4; echo
   echo -e "         ≡ \e[01;37mMENU\e[0m ≡"
   echo -e " \e[00;31m══════════════\e[0m\e[01;37m\e[00;31m═══════════════\e[0m"
   echo -e " \e[01;37m〘*1*〙\e[0m\e[01;33mMENU VIVO\e[0m"
@@ -129,9 +129,9 @@ cd $HOME; clear
   aa=$(echo -e " \e[01;37mOpção: \e[0m")
   read -n1 -p "$aa" opc
    case $opc in
-        1) echo -e "\n\e[01;33mCARREGANDO...\e[0m"|pv -qL 20; sleep 1.5;
+        1) echo -e "\n\e[01;33mCARREGANDO\e[0m"|pv -qL 20; sleep 1.5;
             break;;
-        2) echo -e "\n\e[01;33mCARREGANDO...\e[0m"|pv -qL 20; sleep 1.5
+        2) echo -e "\n\e[01;33mCARREGANDO\e[0m"|pv -qL 20; sleep 1.5
             break;;
         0) rm principal2 > /dev/null 2>&1; echo; echo -e "\e[01;37mNETMODZ | @NetModz\e[0m"; echo -e "\e[01;33mPara iniciar novamente digite: ./principal\e[0m"|pv -qL 20; break;;
         *) echo -e "\e[01;37;41m @NetModz \e[0m"; sleep .5
@@ -140,7 +140,6 @@ cd $HOME; clear
      case $opc in
           1) ./menuVivo.sh;;
           2) ./menuOi.sh;;
-          3) ./datami;;
           0) exit
      esac
 exit
@@ -150,4 +149,3 @@ rm menuOi.sh; rm principal2 > /dev/null 2>&1 ; rm -rf storage; termux-setup-stor
 pkg update -y; apt -o Dpkg::Options::="--force-confnew" upgrade -y; apt install pv -y -qq --silent; apt install jq -y -qq --silent; apt install git -y -qq --silent
 curl -sO https://raw.githubusercontent.com/NetModz/netmodzpainel/main/menuVivo.sh > /dev/null && chmod 777 menuVivo.sh
 curl -sO https://raw.githubusercontent.com/NetModz/netmodzpainel/main/menuOi.sh > /dev/null && chmod 777 menuOi.sh
-curl -sO https://raw.githubusercontent.com/NetModz/netmodzpainel/main/datami > /dev/null && chmod 777 datami
